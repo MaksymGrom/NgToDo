@@ -13,12 +13,22 @@ import { TodoListItemUiComponent } from './ui/todo-list-item-ui/todo-list-item-u
 import { TodoListItemEditUiComponent } from './ui/todo-list-item-edit-ui/todo-list-item-edit-ui.component';
 
 @NgModule({
-  declarations: [TodoPageComponent, TodoWidgetComponent, TodoCreateFormUiComponent, TodoListUiComponent, TodoListItemUiComponent, TodoListItemEditUiComponent],
+  declarations: [
+    TodoPageComponent,
+    TodoWidgetComponent,
+    TodoCreateFormUiComponent,
+    TodoListUiComponent,
+    TodoListItemUiComponent,
+    TodoListItemEditUiComponent
+  ],
   imports: [
     CommonModule,
     StoreModule.forFeature(TODO_REDUCER_NODE, todoReducer),
     RouterModule.forChild(todoRoutes),
     FormsModule
+  ],
+  exports: [
+    TodoWidgetComponent
   ]
 })
 export class TodoModule { }
